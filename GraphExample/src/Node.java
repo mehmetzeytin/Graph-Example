@@ -1,8 +1,10 @@
+import javax.xml.bind.annotation.XmlAccessorType;
+import javax.xml.bind.annotation.XmlAttribute;
 
+@XmlAccessorType
 public class Node {
 	private boolean isVisited;
 	private String nodeValue;
-	
 	
 	public Node (String nodeValue) { // Node Yapýlandýrýcýsý. Node yaratýldýðýnda 
 		                             //BFS aramasýný doðru yapabilmek için ziyaret edilmemiþ olarak iþaretleniyor.
@@ -18,7 +20,7 @@ public class Node {
 	public void setVisiting(boolean isVisited) {
 		this.isVisited = isVisited;
 	}
-	
+	@XmlAttribute
 	public String getNodeValue() {
 		return nodeValue;
 	}
